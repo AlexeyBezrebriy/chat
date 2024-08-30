@@ -1,13 +1,15 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useChatStore } from "../store/chatStore"
+import { useUserStore } from "../store/userStore"
 
 export const useGetChats = () => {
   const { chats, setChats, chatLoading, setChatLoading } = useChatStore()
+  const { isLoading } = useUserStore()
 
   useEffect(() => {
-    getChats()
-  }, [])
+    if (!isLoading) getChats()
+  }, [isLoading])
 
   const getChats = async () => {
     setChatLoading(true)
