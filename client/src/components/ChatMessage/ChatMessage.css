@@ -1,0 +1,32 @@
+.chat__message_content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chat__message_content--received {
+  justify-content: flex-start;
+}
+
+.chat__message_content--received>.chat__message_text {
+  background-color: #525151;
+  color: #f1f0f0;
+}
+
+.chat__message_content--sent {
+  justify-content: flex-end;
+}
+
+.chat__message_text {
+  background-color: #f1f0f0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 60%;
+  word-break: break-all;
+}
+
+.chat__message_time {
+  font-size: 12px;
+  color: #999;
+  margin-left: 10px;
+}
