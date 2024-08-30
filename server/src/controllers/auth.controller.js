@@ -98,6 +98,7 @@ export const botSignup = async (req, res) => {
         customFirstName + customLastName
       }`
     }
+    fullName = `${customFirstName} ${customLastName}`
   } else {
     fullName = `${firstName} ${lastName}`
     profileLogo = `https://avatar.iran.liara.run/public/girl?username=${firstName + lastName}`
